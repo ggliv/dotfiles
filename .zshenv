@@ -25,3 +25,9 @@ export LANG="en_US.UTF-8"
 [ -d ~/.local/bin ] && export PATH=$PATH:~/.local/bin
 # Rust toolchain
 [ -f ~/.cargo/env ] && . ~/.cargo/env
+
+#------------------------------
+# MISC ENV VARS
+#------------------------------
+# Opt out of dotnet telemetry
+DOTNET_CLI_TELEMETRY_OPTOUT=1
