@@ -53,6 +53,8 @@ setopt hist_ignore_space
 #------------------------------
 # Vim-like
 bindkey -v
+# Reduce wait time for escape codes when entering normal mode via Esc
+KEYTIMEOUT=1
 # Home -> Start of line
 bindkey "^[[H" beginning-of-line
 # End -> End of line
