@@ -24,21 +24,6 @@ case $TERM in
 esac
 
 #------------------------------
-# EDITOR
-#------------------------------
-# nvim > vim > vi
-if command -v nvim > /dev/null; then
-	export EDITOR="nvim"
-	export VISUAL="nvim"
-elif command -v vim > /dev/null; then
-	export EDITOR="vim"
-	export VISUAL="vim"
-else
-	export EDITOR="vi"
-	export VISUAL="vi"
-fi
-
-#------------------------------
 # HISTORY
 #------------------------------
 HISTFILE=~/.zsh_history
