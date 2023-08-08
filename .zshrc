@@ -1,4 +1,15 @@
 #------------------------------
+# EXIT IF NON-INTERACTIVE
+#------------------------------
+case $- in
+	*i*)
+		;;
+	*)
+		return
+		;;
+esac
+
+#------------------------------
 # PROMPT
 # See: https://wiki.archlinux.org/title/Zsh#Customized_prompt
 #------------------------------
