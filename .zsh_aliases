@@ -9,3 +9,9 @@ alias rm="rm -i"
 
 # Sound machine
 alias noise="sox -q -c 2 -r 32000 -n -d -D synth brownnoise vol 0.2 tremolo 0.0625 50 fade t 3 gain +8"
+
+# Add warning flags to cc
+cflags="-Wall -Wextra -Wpedantic -std=c99"
+alias gcc="gcc $cflags"
+alias cland="clang $cflags"
+cflags=
