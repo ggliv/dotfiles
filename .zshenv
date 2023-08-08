@@ -30,4 +30,4 @@ export LANG="en_US.UTF-8"
 # MISC ENV VARS
 #------------------------------
 # Opt out of dotnet telemetry
-DOTNET_CLI_TELEMETRY_OPTOUT=1
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
