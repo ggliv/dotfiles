@@ -16,10 +16,10 @@ esac
 # user:~/Directory> command
 case $TERM in
 	*256color)
-		PROMPT="%B%F{62}%n%f:%F{226}%(4~|.../%3~|%~)%f%F{%(?.green.red)}>%f%b "
+		PROMPT="%B%F{62}$(whoami)%f:%F{226}%(4~|.../%3~|%~)%f%F{%(?.green.red)}>%f%b "
 		;;
 	*)
-		PROMPT="%B%F{magenta}%n%f:%F{cyan}%(4~|.../%3~|%~)%f%F{%(?.green.red)}>%f%b "
+		PROMPT="%B%F{magenta}$(whoami)%f:%F{cyan}%(4~|.../%3~|%~)%f%F{%(?.green.red)}>%f%b "
 		;;
 esac
 
@@ -60,7 +60,7 @@ bindkey "^[[B" down-line-or-beginning-search
 case $TERM in
 	*xterm*|termite|rxvt*|(dt|k|E)term)
 		__rc_idle_window_title() {
-			print -Pn "\e]0;%n@%M:%~\a"
+			print -Pn "\e]0;$(whoami)@%M:%~\a"
 		}
 		__rc_active_window_title() {
 			print -Pn "\e]0;$(printf "%s" "$1" | awk '{ print $1 }')\a"
