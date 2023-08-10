@@ -22,7 +22,7 @@ export LANG="en_US.UTF-8"
 # $PATH ADDITIONS
 #------------------------------
 # User scripts
-[ -d ~/.local/bin ] && export PATH=$PATH:~/.local/bin
+[ -d ~/.local/bin ] && export PATH=~/.local/bin:$PATH
 # Rust toolchain
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 
