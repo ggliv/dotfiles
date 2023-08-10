@@ -1,4 +1,17 @@
 #------------------------------
+# LOCALE
+#------------------------------
+export LANG="en_US.UTF-8"
+
+#------------------------------
+# $PATH ADDITIONS
+#------------------------------
+# User scripts
+[ -d ~/.local/bin ] && export PATH=~/.local/bin:$PATH
+# Rust toolchain
+[ -f ~/.cargo/env ] && . ~/.cargo/env
+
+#------------------------------
 # EDITOR
 #------------------------------
 # nvim > vim > vi
@@ -12,19 +25,6 @@ else
 	export EDITOR="vi"
 	export VISUAL="vi"
 fi
-
-#------------------------------
-# LOCALE
-#------------------------------
-export LANG="en_US.UTF-8"
-
-#------------------------------
-# $PATH ADDITIONS
-#------------------------------
-# User scripts
-[ -d ~/.local/bin ] && export PATH=~/.local/bin:$PATH
-# Rust toolchain
-[ -f ~/.cargo/env ] && . ~/.cargo/env
 
 #------------------------------
 # MISC ENV VARS
