@@ -45,6 +45,9 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
+# hide container borders adjacent to screen edges
+hide_edge_borders both
+
 # lock+suspend bind
 bindsym $mod+F12 exec "i3lock -c 000000 && systemctl suspend"
 
