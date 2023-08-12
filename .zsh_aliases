@@ -1,5 +1,6 @@
 alias lg="lazygit"
 alias cls="clear"
+alias py="python3 || python || python2"
 
 # Colorize `ls` output
 alias ls="ls --color=auto"
