@@ -75,10 +75,10 @@ require('lazy').setup({
   },
 
   { -- Theme inspired by Atom
-    'folke/tokyonight.nvim',
+    'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'tokyonight'
+      vim.cmd.colorscheme 'onedark'
     end,
   },
 
