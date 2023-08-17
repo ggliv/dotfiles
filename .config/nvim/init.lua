@@ -374,6 +374,14 @@ local on_attach = function(_, bufnr)
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, '[W]orkspace [L]ist Folders')
 
+  -- Show diagnostics in a floating window when hovered in normal mode
+  vim.api.nvim_create_autocmd('CursorHold', {
+    callback = function()
+      vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' })
+    end
+  })
+  vim.diagnostic.config({ virtual_text = false })
+
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
