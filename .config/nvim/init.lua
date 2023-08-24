@@ -209,6 +209,10 @@ vim.o.softtabstop = 2
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 
+-- Replace tabs and trailing spaces with visible characters
+vim.o.listchars = 'tab:>-,trail:~'
+vim.o.list = true
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
