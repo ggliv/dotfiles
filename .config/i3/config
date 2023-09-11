@@ -155,13 +155,19 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # move focused workspace between monitors
-mode "workspace->monitor" {
+mode "workspace manip" {
+        bindsym $mod+h workspace prev
+        bindsym $mod+l workspace next
+
         bindsym $mod+Shift+h move workspace to output left
         bindsym $mod+Shift+j move workspace to output down
         bindsym $mod+Shift+k move workspace to output up
         bindsym $mod+Shift+l move workspace to output right
 
         # for arrow keys
+        bindsym $mod+Left workspace prev
+        bindsym $mod+Right workspace next
+
         bindsym $mod+Shift+Left move workspace to output left
         bindsym $mod+Shift+Down move workspace to output down
         bindsym $mod+Shift+Up move workspace to output up
@@ -173,7 +179,7 @@ mode "workspace->monitor" {
         bindsym $mod+m mode "default"
 }
 
-bindsym $mod+m mode "workspace->monitor"
+bindsym $mod+m mode "workspace manip"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
