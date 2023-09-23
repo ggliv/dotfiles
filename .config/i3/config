@@ -49,10 +49,10 @@ tiling_drag modifier titlebar
 hide_edge_borders both
 
 # lock+suspend bind
-bindsym $mod+Escape exec "i3lock -c 000000 && systemctl suspend"
+bindsym $mod+Escape exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
