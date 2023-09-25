@@ -2,6 +2,7 @@ alias lg="lazygit"
 alias cls="clear"
 alias py="python3 || python || python2"
 alias v="$VISUAL"
+alias info="info --vi-keys"
 
 # Colorize `ls` output
 alias ls="ls --color=auto"
