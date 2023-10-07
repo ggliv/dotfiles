@@ -16,5 +16,7 @@ alias noise="sox -q -c 2 -r 32000 -n -d -D synth brownnoise vol 0.2 tremolo 0.06
 # Add flags to compilers
 cflags="-Wall -Wextra -Wpedantic -ansi"
 alias gcc="gcc $cflags"
+alias g++="g++ $cflags"
 alias clang="clang $cflags"
+alias clang++="clang++ $cflags"
 unset cflags
