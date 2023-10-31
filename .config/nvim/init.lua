@@ -68,6 +68,12 @@ require('lazy').setup({
     },
   },
 
+  { -- Automatic pair addition
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {}   -- this is equalent to setup({}) function
+  },
+
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
