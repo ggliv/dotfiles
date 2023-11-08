@@ -1,3 +1,5 @@
+-- [[ Trivial Plugins ]]
+
 return {
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -57,7 +59,14 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     -- See `:help indent_blankline.txt`
     main = 'ibl',
-    opts = {},
+    opts = {
+      -- See `:help ibl.config.scope`
+      scope = {
+        -- Don't underline start or end lines of scope
+        show_start = false,
+        show_end = false,
+      },
+    },
   },
 
   -- "gc" to comment visual regions/lines
