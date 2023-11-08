@@ -62,4 +62,18 @@ return {
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
+
+  { -- Show diagnostics in virtual lines
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      -- Toggle plugin with <Leader>l
+      vim.keymap.set(
+        "",
+        "<Leader>l",
+        require("lsp_lines").toggle,
+        { desc = "Toggle lsp_lines" }
+      )
+      require("lsp_lines").setup()
+    end,
+  }
 }
