@@ -1,7 +1,7 @@
 alias lg="lazygit"
 alias cls="clear"
 alias py="python3 || python || python2"
-alias v="$VISUAL"
+alias vi="$VISUAL"
 alias info="info --vi-keys"
 alias qemux86="qemu-system-x86_64"
 
