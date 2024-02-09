@@ -1,0 +1,67 @@
+[window]
+dimensions = { lines = 24, columns = 80 }
+
+[env]
+TERM = 'xterm-256color'
+
+[[hints.enabled]]
+command         = "xdg-open" # On Linux/BSD
+# command       = "open" # On macOS
+# command       = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
+hyperlinks      = true
+post_processing = true
+persist         = false
+mouse.enabled   = true
+mouse.mods      = "Control"
+binding         = { key = "U", mods = "Control|Shift" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
+
+[scrolling]
+multiplier = 4
+
+[font]
+size = 12.0
+
+[font.bold]
+family = 'Berkeley Mono'
+style  = 'Bold'
+
+[font.bold_italic]
+family = 'Berkeley Mono'
+style  = 'Bold Italic'
+
+[font.italic]
+family = 'Berkeley Mono'
+style  = 'Italic'
+
+[font.normal]
+family = 'Berkeley Mono'
+style  = 'Regular'
+
+# Colors from xfce4-terminal
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+foreground = '#ffffff'
+background = '#000000'
+
+[colors.normal]
+black   = '#000000'
+red     = '#aa0000'
+green   = '#00aa00'
+yellow  = '#aa5500'
+blue    = '#0000aa'
+magenta = '#aa00aa'
+cyan    = '#00aaaa'
+white   = '#aaaaaa'
+
+[colors.bright]
+black   = '#555555'
+red     = '#ff5555'
+green   = '#55ff55'
+yellow  = '#ffff55'
+blue    = '#5555ff'
+magenta = '#ff55ff'
+cyan    = '#55ffff'
+white   = '#ffffff'
