@@ -63,6 +63,10 @@ return {
           end
         end, { 'i', 's' }),
       },
+      completion = {
+        -- Automatically select the first completion
+        completeopt = 'menu,menuone,noinsert'
+      },
       sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
