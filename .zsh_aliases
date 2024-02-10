@@ -22,7 +22,7 @@ alias rm="rm -i"
 alias noise="sox -q -c 2 -r 32000 -n -d -D synth brownnoise vol 0.2 tremolo 0.0625 50 fade t 3 gain +8"
 
 # Add flags to compilers
-cflags="-Wall -Wextra -Wpedantic -ansi"
+cflags="-Wall -Wextra -Wpedantic"
 alias gcc="gcc $cflags"
 alias g++="g++ $cflags"
 alias clang="clang $cflags"
