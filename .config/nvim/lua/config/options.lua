@@ -4,7 +4,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.diagnostic.config({
+-- We store this here so that lsp_lines can restore the config after toggling
+Virtual_lines_config = {
   virtual_lines = {
     -- Don't highlight the entire diagnostic line
     highlight_whole_line = false,
@@ -13,7 +14,9 @@ vim.diagnostic.config({
   },
   -- Don't use virtual text
   virtual_text = false,
-})
+}
+
+vim.diagnostic.config(Virtual_lines_config)
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
