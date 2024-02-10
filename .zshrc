@@ -15,7 +15,7 @@ esac
 #------------------------------
 # user:~/Directory> command
 case $TERM in
-	*256color)
+	*256color|alacritty)
 		PROMPT="%B%F{62}$(whoami)%f:%F{226}%(4~|.../%3~|%~)%f%F{%(?.green.red)}>%f%b "
 		;;
 	*)
@@ -58,7 +58,7 @@ bindkey "^[[B" down-line-or-beginning-search
 # Show name, host, and pwd on idle
 # Show command name when something is running
 case $TERM in
-	*xterm*|termite|rxvt*|(dt|k|E)term)
+	*xterm*|alacritty|termite|rxvt*|(dt|k|E)term)
 		__rc_idle_window_title() {
 			print -Pn "\e]0;$(whoami)@%M:%~\a"
 		}
