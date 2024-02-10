@@ -1,9 +1,6 @@
 [window]
 dimensions = { lines = 24, columns = 80 }
 
-[env]
-TERM = 'xterm-256color'
-
 [[hints.enabled]]
 command         = "xdg-open" # On Linux/BSD
 # command       = "open" # On macOS
