@@ -5,8 +5,12 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.diagnostic.config({
-  -- Don't highlight the entire diagnostic line
-  virtual_lines = { highlight_whole_line = false },
+  virtual_lines = {
+    -- Don't highlight the entire diagnostic line
+    highlight_whole_line = false,
+    -- Only show diagnostics on the current line
+    only_current_line = true
+  },
   -- Don't use virtual text
   virtual_text = false,
 })
