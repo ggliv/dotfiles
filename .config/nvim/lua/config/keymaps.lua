@@ -13,3 +13,10 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Autoindent with :Format when we don't have an LSP
+vim.api.nvim_create_user_command('Format', function()
+  local ogPos = vim.api.nvim_win_get_cursor(0)
+  vim.cmd.normal('gg=G')
+  vim.api.nvim_win_set_cursor(0, ogPos)
+end, { desc = "Autoindent the current buffer" })
