@@ -16,5 +16,14 @@
 	defaultBranch = main
 [alias]
 	adog = log --all --decorate --oneline --graph
+	staash = stash --all
+	bblame = blame -w -C -C -C
+	fpush = push --force-with-lease
 [pull]
 	rebase = true
+[rerere]
+	enabled = true
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
