@@ -4,6 +4,12 @@ alias vi="$VISUAL"
 alias info="info --vi-keys"
 alias qemux86="qemu-system-x86_64"
 
+if [ "$VISUAL" = "nvim" ]; then
+  alias difftool="nvim -d"
+else
+  alias difftool="vimdiff"
+fi
+
 if command -v "python3" &> /dev/null; then
   alias py="python3";
 elif command -v "python" &> /dev/null; then

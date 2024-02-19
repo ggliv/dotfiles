@@ -27,3 +27,7 @@
 	sort = -committerdate
 [column]
 	ui = auto
+[diff]
+	tool = difftool
+[difftool "difftool"]
+    cmd = "difftool"
