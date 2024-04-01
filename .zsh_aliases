@@ -3,6 +3,7 @@ alias cls="clear"
 alias vi="$VISUAL"
 alias info="info --vi-keys"
 alias qemux86="qemu-system-x86_64"
+alias ll="ls -l"
 
 if [ "$VISUAL" = "nvim" ]; then
   alias difftool="nvim -d"
