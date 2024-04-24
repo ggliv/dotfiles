@@ -11,6 +11,14 @@ else
   alias difftool="vimdiff"
 fi
 
+fork() {
+  if [ "$#" -eq 0 ]; then
+    $TERM & disown
+  else
+    $@ & disown
+  fi
+}
+
 if command -v "python3" &> /dev/null; then
   alias py="python3";
 elif command -v "python" &> /dev/null; then
