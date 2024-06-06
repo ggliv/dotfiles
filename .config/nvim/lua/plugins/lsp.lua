@@ -9,8 +9,9 @@ return {
     -- Useful status updates for LSP
     { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
 
-    -- Additional lua configuration, makes nvim stuff amazing!
-    { 'folke/neodev.nvim',       opts = {} },
+    -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
+    -- used for completion, annotations and signatures of Neovim apis
+    { 'folke/lazydev.nvim',      ft = 'lua',     opts = {} },
   },
 
   config = function()
