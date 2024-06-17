@@ -1,0 +1,5 @@
+configuration {
+  terminal: "alacritty";
+}
+
+@theme "/usr/share/rofi/themes/purple.rasi"
