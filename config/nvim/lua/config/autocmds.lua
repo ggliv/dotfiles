@@ -8,3 +8,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Don't insert comments with o/O in normal mode
+vim.api.nvim_create_autocmd("FileType", {
+  desc = "Don't insert comments with o/O in normal mode",
+  pattern = "*",
+  callback = function()
+    vim.opt.formatoptions:remove('o')
+  end
+})
