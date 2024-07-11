@@ -1,66 +1,40 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- This file is sourced before any others
+-- Set leader keys
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
--- We store this here so that lsp_lines can restore the config after toggling
-Virtual_lines_config = {
-  virtual_lines = {
-    -- Don't highlight the entire diagnostic line
-    highlight_whole_line = false,
-    -- Only show diagnostics on the current line
-    only_current_line = true
-  },
-  -- Don't use virtual text
+-- Indentation
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+
+-- Show line numbers
+vim.opt.number = true
+
+-- Keep undo trees after closing
+vim.opt.undofile = true
+
+-- Diagnostics
+vim.diagnostic.config({
   virtual_text = false,
-}
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
 
-vim.diagnostic.config(Virtual_lines_config)
-
--- [[ Setting options ]]
--- See `:help vim.o`
--- NOTE: You can change these options as you wish!
-
--- Set highlight on search
-vim.o.hlsearch = false
-
--- Make line numbers default
-vim.wo.number = true
-
--- Enable mouse mode
-vim.o.mouse = 'a'
-
--- Enable break indent
-vim.o.breakindent = true
-
--- Save undo history
-vim.o.undofile = true
-
--- Case-insensitive searching UNLESS \C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
--- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
-
--- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
-
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
-
--- Use 24-bit color (may not be supported in all terminals)
-vim.o.termguicolors = true
-
--- Indentation/tab configuration
-vim.o.expandtab = true
-vim.o.smartindent = true
-vim.o.softtabstop = 2
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-
--- Replace tabs and trailing spaces with visible characters
+-- Show invisible characters
 vim.o.listchars = 'tab:>-,trail:~'
 vim.o.list = true
+
+-- Custom commands
+-- Autoindent with :Format when we don't have an LSP
+vim.api.nvim_create_user_command('Format', function()
+    vim.lsp.buf.format()
+    local ogPos = vim.api.nvim_win_get_cursor(0)
+    vim.cmd.normal('gg=G')
+    vim.api.nvim_win_set_cursor(0, ogPos)
+end, { desc = "Autoindent the current buffer" })
+
