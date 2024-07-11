@@ -3,6 +3,11 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp"
   },
+  -- Only load if we're in an LSP session,
+  -- since that's all cmp is used for and
+  -- hrsh7th/nvim-cmp#1841 causes massive
+  -- slowdown on large files
+  event = "LspAttach",
   config = function()
     local cmp = require("cmp")
     cmp.setup {
