@@ -15,8 +15,8 @@ for e in config/*; do
     printf "Replace existing config directory ~/%s? " "$de"
     read c
     if [ "$c" = "y" ]; then
-      mv ~/"$de" ~/"$de".bak
-      echo "Placed backup at ~/$de.bak"
+      mv ~/"$de" ~/"$de"~
+      echo "Placed backup at ~/$de~"
     fi
   fi
   ln -sfib "$BASE_DIR"/"$e" "$de"
