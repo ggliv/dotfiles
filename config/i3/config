@@ -64,7 +64,7 @@ bindsym $mod+Shift+q kill
 bindsym --release $mod+Shift+Escape exec --no-startup-id xkill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -show drun"
+bindsym $mod+d exec --no-startup-id "rofi -X11 -show drun"
 
 # change focus
 bindsym $mod+h focus left
