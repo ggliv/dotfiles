@@ -5,9 +5,12 @@ BASE_DIR="$(cd $(dirname "$0"); pwd)"
 
 cd "$BASE_DIR"
 
+CONFIG_DIR="$XDG_DESKTOP_HOME"
+[ -z "$CONFIG_DIR" ] && CONFIG_DIR=~/.config
+
 # Add contents of .config
 for e in config/*; do
-  de=."$e"
+  de="$CONFIG_DIR"/"$(basename -- $e)"
   if [ -e ~/"$de" ]; then
     printf "Replace existing config directory ~/%s? " "$de"
     read c
@@ -16,7 +19,7 @@ for e in config/*; do
       echo "Placed backup at ~/$de.bak"
     fi
   fi
-  ln -sfib "$BASE_DIR"/"$e" ~/"$de"
+  ln -sfib "$BASE_DIR"/"$e" "$de"
 done
 
 # Add top-level files prefixed with .
