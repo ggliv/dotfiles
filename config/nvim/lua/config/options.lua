@@ -13,6 +13,10 @@ vim.opt.smartindent = true
 -- Show line numbers
 vim.opt.number = true
 
+-- Put signs inline with line numbers
+-- Stops horizontal movement, see `:h signcolumn`
+vim.opt.signcolumn = "number"
+
 -- Keep undo trees after closing
 vim.opt.undofile = true
 
@@ -26,8 +30,8 @@ vim.diagnostic.config({
 })
 
 -- Show invisible characters
-vim.o.listchars = 'tab:>-,trail:~'
-vim.o.list = true
+vim.opt.listchars = 'tab:>-,trail:~'
+vim.opt.list = true
 
 -- Custom commands
 -- Autoindent with :Format when we don't have an LSP
