@@ -22,6 +22,7 @@ return {
           vim.keymap.set('n', 'gd', vim.lsp.buf.definition, vim.fn.extend(opts, { desc = "Go to definition" }))
           vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, vim.fn.extend(opts, { desc = "Go to implementation" }))
           vim.keymap.set('n', 'gr', vim.lsp.buf.references, vim.fn.extend(opts, { desc = "Go to references" }))
+          vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, vim.fn.extend(opts, { desc = "Rename symbol" }))
         end
 
         require("mason-lspconfig").setup_handlers {
