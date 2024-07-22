@@ -13,9 +13,9 @@ fi
 
 fork() {
   if [ "$#" -eq 0 ]; then
-    $TERM & disown
+    $TERM & disown %-
   else
-    $@ & disown
+    $@ & disown %-
   fi
 }
 
