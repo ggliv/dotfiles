@@ -33,6 +33,10 @@ vim.diagnostic.config({
 vim.opt.listchars = 'tab:>-,trail:~'
 vim.opt.list = true
 
+-- Don't fold things by default
+vim.opt.foldenable = false
+vim.opt.foldlevel = 2e9
+
 -- Custom commands
 -- Autoindent with :Format when we don't have an LSP
 vim.api.nvim_create_user_command('Format', function()
