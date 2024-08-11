@@ -81,6 +81,9 @@ input type:touchpad {
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+    # Screenshot
+    bindsym Print exec /usr/share/sway-contrib/grimshot copy area
+
 #
 # Moving around:
 #
