@@ -240,4 +240,4 @@ bar {
 # Hide container borders adjacent to screen edges.
 hide_edge_borders both
 
-include @sysconfdir@/sway/config.d/*
+include /etc/sway/config.d/*
