@@ -205,8 +205,8 @@ mode "workspace manip" {
 
     bindsym $mod+Shift+$left move workspace to output left
     bindsym $mod+Shift+$down move workspace to output down
-    bindsym $mod+Shift+$right move workspace to output up
-    bindsym $mod+Shift+$up move workspace to output right
+    bindsym $mod+Shift+$right move workspace to output right
+    bindsym $mod+Shift+$up move workspace to output up
 
     # for arrow keys
     bindsym $mod+Left workspace prev
@@ -214,8 +214,8 @@ mode "workspace manip" {
 
     bindsym $mod+Shift+Left move workspace to output left
     bindsym $mod+Shift+Down move workspace to output down
-    bindsym $mod+Shift+Up move workspace to output up
     bindsym $mod+Shift+Right move workspace to output right
+    bindsym $mod+Shift+Up move workspace to output up
 
     # back to normal: Enter or Escape or $mod+r
     bindsym Return mode "default"
