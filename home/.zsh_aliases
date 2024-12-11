@@ -43,3 +43,8 @@ alias g++="g++ $cflags"
 alias clang="clang $cflags"
 alias clang++="clang++ $cflags"
 unset cflags
+
+# Radio
+alias wuog="mpv --no-resume-playback 'http://stream.wuog.org:8000/stream'"
+alias wrek="mpv --no-resume-playback 'https://streaming.wrek.org/main/320kb.mp3'"
+alias wabe="mpv --no-resume-playback 'https://playerservices.streamtheworld.com/api/livestream-redirect/WABEFM_HD1'"
