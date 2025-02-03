@@ -31,3 +31,5 @@ fi
 #------------------------------
 # Opt out of dotnet telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+# ssh-agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
