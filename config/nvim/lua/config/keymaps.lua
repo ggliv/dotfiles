@@ -1,3 +1,6 @@
+-- Spellcheck
+vim.keymap.set("n", "<leader>c", "<cmd>set invspell<CR>", { desc = "Toggle spellcheck" })
+
 -- Buffer splitting
 vim.keymap.set("n", "<leader>sv", "<C-w>s", { desc = "Split window vertically" })
 vim.keymap.set("n", "<leader>sb", "<C-w>v", { desc = "Split window horizontally" })
